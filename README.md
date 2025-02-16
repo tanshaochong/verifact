@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Verifact
+
+Verifact is an AI-powered claim verification and fact-checking service that helps users verify the accuracy of statements and claims. Built with Next.js and cutting-edge AI technology, it provides real-time verification of factual statements.
+
+## Features
+
+- **Smart Claim Extraction**: Automatically identifies and extracts verifiable claims from text
+- **AI-Powered Verification**: Uses advanced AI to verify claims against reliable sources
+- **Real-time Processing**: Instant claim extraction and verification
+- **Detailed Explanations**: Provides comprehensive verification results with sources and confidence levels
+- **Modern UI/UX**: Clean, responsive interface built with Next.js and Radix UI
+- **Error Handling**: Robust error handling with graceful fallbacks
+
+## Tech Stack
+
+- **Framework**: Next.js 15 with TypeScript
+- **UI Components**: Radix UI primitives
+- **Styling**: Tailwind CSS
+- **State Management**: React Query
+- **AI Integration**: OpenAI and Perplexity APIs
+- **Type Safety**: Full TypeScript implementation
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/tanshaochong/verifact.git
+cd verifact
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Set up environment variables:
 
-## Learn More
+```bash
+cp .env.example .env.local
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Add your API keys to `.env.local`:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+OPENAI_API_KEY=your_openai_api_key_here
+PERPLEXITY_API_KEY=your_perplexity_api_key_here
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Required API Keys:
 
-## Deploy on Vercel
+- **OpenAI API Key**: Used for claim extraction and initial verification ([Get key](https://platform.openai.com/api-keys))
+- **Perplexity API Key**: Used for fact verification and source retrieval ([Get key](https://docs.perplexity.ai/))
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. Run the development server:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+pnpm dev
+```
+
+6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
+
+## Project Structure
+
+```
+verifact/
+├── app/              # Next.js app router pages
+├── components/       # React components
+├── hooks/           # Custom React hooks
+├── services/        # API services
+├── types/           # TypeScript types
+├── lib/             # Utility functions
+└── constants/       # Application constants
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
