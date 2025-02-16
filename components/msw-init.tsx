@@ -9,7 +9,11 @@ export function MSWInit() {
         typeof window !== "undefined" &&
         process.env.NEXT_PUBLIC_API_MOCKING === "enabled"
       ) {
-        const { worker } = await import("@/mocks/browser");
+        // Use dynamic import for the worker
+        const { setupWorker } = await import("msw/browser");
+        const { handlers } = await import("@/mocks/handlers");
+        
+        const worker = setupWorker(...handlers);
         await worker.start({
           onUnhandledRequest: "bypass",
         });

@@ -7,11 +7,6 @@ import { Toaster } from "sonner";
 import { MSWInit } from "@/components/msw-init";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
-// Initialize MSW in development
-if (process.env.NEXT_PUBLIC_API_MOCKING === "enabled") {
-  require("@/mocks/browser");
-}
-
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {

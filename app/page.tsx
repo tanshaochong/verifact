@@ -26,7 +26,7 @@ export default function Home() {
           editable={true}
           editorClassName="focus:outline-none"
           content={MOCK_DEFAULT_CONTENT}
-          immediatelyRender
+          immediatelyRender={false}
         />
       </div>
       <div className="flex-1">

@@ -79,7 +79,7 @@ function NoClaimsFound({
         <div className="flex flex-col gap-2 text-center">
           <h3 className="font-semibold">No Claims Found</h3>
           <p className="max-w-sm text-balance text-sm text-muted-foreground">
-            We couldn't identify any verifiable claims in your content. Try
+            We couldn&apos;t identify any verifiable claims in your content. Try
             modifying your text or try again.
           </p>
         </div>

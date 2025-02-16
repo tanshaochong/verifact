@@ -11,7 +11,6 @@ import { Link } from "../extensions";
 import { cn } from "@/lib/utils";
 import { getOutput } from "../utils";
 import { useThrottle } from "../hooks/use-throttle";
-import { toast } from "sonner";
 
 export interface UseMinimalTiptapEditorProps extends UseEditorOptions {
   value?: Content;
